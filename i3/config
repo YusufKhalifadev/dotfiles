@@ -186,7 +186,7 @@ bindsym Print exec "flameshot gui"
 for_window [class="^.*"] border pixel 2
 
 # Set inner/outer gaps
-gaps inner 7
+gaps inner 2
 gaps outer 2
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
@@ -215,4 +215,5 @@ exec --no-startup-id xautolock -corners -000 -time 60 -locker 'i3lock -c 000000'
 bindsym Shift+$mod+Pause exec i3lock -c 000000 && systemctl suspend
 bindsym $mod+Pause exec i3lock -c 000000
 
-exec --no-startup-id xmodmap -e "keycode 107 = Super_R"
+exec_always --no-startup-id xmodmap -e "keycode 107 = Super_R"
+exec_always --no-startup-id xmodmap -e "keycode 110 = Print"
